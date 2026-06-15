@@ -14,6 +14,8 @@
         <h1>Dorai Raj</h1>
         <p>Project Manager &amp; Business Solutions Specialist</p>
         <p>Bengaluru, Karnataka, India</p>
+        <p><strong>Email:</strong> <a href="mailto:dorai.win@gmail.com">dorai.win@gmail.com</a></p>
+
         <hr>
         <nav>
             <ul>
@@ -114,12 +116,64 @@
     </section>
     <!-- END PROJECTS SECTION -->
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>For project inquiries or career opportunities, please reach out via email.</p>
-        <p><strong>Email:</strong> <a href="mailto:dorai.win@gmail.com">dorai.win@gmail.com</a></p>
-    </section> 
+    <!-- ========== CONTACT SECTION ========== -->
 
+<section id="contact">
+    <h2>Contact</h2>
+    <p>For project inquiries or career opportunities, please fill out the form below.</p>
+
+    <!-- Contact form with HTML5 validation -->
+    <form>
+
+        <!-- Name field - required -->
+          <div>
+        <label for="name">Your Name</label>
+        <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Only text allowed"
+            pattern="[A-Za-z\s]+"
+            required>
+            </div>
+
+        <!-- Email field - required, must be valid email format -->
+         <div>
+        <label for="email">Your Email</label>
+        <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Enter your email address"
+            required>
+            </div>
+
+        <!-- Subject field - required -->
+        <div>
+        <label for="subject">Subject</label>
+        <input 
+            type="text" 
+            id="subject" 
+            name="subject" 
+            placeholder="Enter subject"
+            required>
+            </div>
+        <!-- Message field - textarea for multi-line, required -->
+         <div>
+        <label for="message">Message</label>
+        <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            placeholder="Write your message here..."
+            required></textarea>
+            </div>
+
+        <!-- Submit button -->
+        <button type="submit">Send Message</button>
+    </form>
+
+</section>
     <!-- END CONTACT SECTION -->
 
     <hr>
