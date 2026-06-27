@@ -6,17 +6,19 @@
     <title>Dorai Raj | Portfolio</title>
     <meta name="description" content="Portfolio of Dorai Raj — Project Manager & Business Solutions Specialist based in Bengaluru.">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <!-- External CSS file (Assignment 3 requirement) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Dorai Raj | Assignment 1 - Full Stack Development -->
+    <!-- Dorai Raj | Assignment 3 - Full Stack Development (CSS3 Styling) -->
+
+    <!-- ========== HEADER SECTION ========== -->
     <header>
         <h1>Dorai Raj</h1>
-        <p>Project Manager &amp; Business Solutions Specialist</p>
+        <p class="tagline">Project Manager &amp; Business Solutions Specialist</p>
         <p>Bengaluru, Karnataka, India</p>
         <p><strong>Email:</strong> <a href="mailto:dorai.win@gmail.com">dorai.win@gmail.com</a></p>
 
-        <hr>
         <nav>
             <ul>
                 <li><a href="#about">About Me</a></li>
@@ -26,21 +28,23 @@
             </ul>
         </nav>
     </header>
-<!-- ========== ABOUT ME SECTION ========== -->
+    <!-- END HEADER -->
+
+    <!-- ========== ABOUT ME SECTION ========== -->
     <section id="about">
         <h2>About Me</h2>
         <img
-            src="Dorai.jpg"
+            src="images/Dorai.jpg"
             alt="Dorai Raj, Project Manager based in Bengaluru"
             width="180" height="180">
-        <p>I am a Project Manager and Business Solutions Specialist with over 
-            10 years of hands-on experience in ERP implementation, Microsoft D365, 
+        <p>I am a Project Manager and Business Solutions Specialist with over
+            10 years of hands-on experience in ERP implementation, Microsoft D365,
             POS, PLM, and enterprise application integrations.</p>
-        <p>Currently working at <strong>Dr. Martens plc</strong> as a Business 
-            Solutions Specialist in Bengaluru, contributing to Distribution and 
+        <p>Currently working at <strong>Dr. Martens plc</strong> as a Business
+            Solutions Specialist in Bengaluru, contributing to Distribution and
             Wholesale product groups using Agile methodology.</p>
-        <p>Previously at <strong>Aditya Birla Fashion and Retail Ltd.</strong> 
-            for nearly 3 years, leading ERP and PLM implementations across 
+        <p>Previously at <strong>Aditya Birla Fashion and Retail Ltd.</strong>
+            for nearly 3 years, leading ERP and PLM implementations across
             fashion and retail operations.</p>
     </section>
     <!-- END ABOUT SECTION -->
@@ -48,7 +52,7 @@
     <!-- ========== SKILLS SECTION ========== -->
     <section id="skills">
         <h2>Skills &amp; Expertise</h2>
-        <ul>
+        <ul class="skills-list">
             <li>ERP Implementation (Microsoft D365)</li>
             <li>POS &amp; PLM Systems (Simplex)</li>
             <li>Unicommerce (OMS / WMS)</li>
@@ -66,117 +70,86 @@
     <section id="projects">
         <h2>Projects</h2>
 
-        <!-- PROJECT 1 -->
-        <article>
-            <h3>D365 ERP Rollout &mdash; Dr. Martens plc</h3>
-            <p>
-                Contributing to the Distribution &amp; Wholesale product group 
-                following Agile methodology. Responsibilities include identifying 
-                and documenting business processes, configuring solutions, liaising 
-                with stakeholders during sprint planning, leading QA regression 
-                testing, and providing end-user BAU support across multiple time zones.
-            </p>
-            <p><strong>Role:</strong> Business Solutions Specialist</p>
-            <p><strong>Duration:</strong> Dec 2025 &ndash; Present</p>
-            <a href="https://www.drmartens.com" target="_blank" rel="noopener noreferrer">Visit Dr. Martens</a>
-        </article>
+        <div class="projects-grid">
 
-        <hr>
+            <!-- PROJECT 1 -->
+            <article class="project-card">
+                <h3>D365 ERP Rollout &mdash; Dr. Martens plc</h3>
+                <p>
+                    Contributing to the Distribution &amp; Wholesale product group
+                    following Agile methodology. Responsibilities include identifying
+                    and documenting business processes, configuring solutions, liaising
+                    with stakeholders during sprint planning, leading QA regression
+                    testing, and providing end-user BAU support across multiple time zones.
+                </p>
+                <p><strong>Role:</strong> Business Solutions Specialist</p>
+                <p><strong>Duration:</strong> Dec 2025 &ndash; Present</p>
+                <a class="project-link" href="https://www.drmartens.com" target="_blank" rel="noopener noreferrer">Visit Dr. Martens</a>
+            </article>
 
-        <!-- PROJECT 2 -->
-        <article>
-            <h3>Unicommerce OMS/WMS Implementation &mdash; ABFRL</h3>
-            <p>
-                Led the implementation of Unicommerce for the Fashion and Retail 
-                division, enabling omnichannel order and warehouse management. 
-                Managed middleware integrations, handled change requests, performed 
-                user training, and provided ongoing post-go-live support.
-            </p>
-            <p><strong>Role:</strong> IT Associate Project Manager</p>
-            <p><strong>Duration:</strong> Feb 2023 &ndash; Dec 2025</p>
-            <a href="https://www.abfrl.com" target="_blank" rel="noopener noreferrer">Visit ABFRL</a>
-        </article>
+            <!-- PROJECT 2 -->
+            <article class="project-card">
+                <h3>Unicommerce OMS/WMS Implementation &mdash; ABFRL</h3>
+                <p>
+                    Led the implementation of Unicommerce for the Fashion and Retail
+                    division, enabling omnichannel order and warehouse management.
+                    Managed middleware integrations, handled change requests, performed
+                    user training, and provided ongoing post-go-live support.
+                </p>
+                <p><strong>Role:</strong> IT Associate Project Manager</p>
+                <p><strong>Duration:</strong> Feb 2023 &ndash; Dec 2025</p>
+                <a class="project-link" href="https://www.abfrl.com" target="_blank" rel="noopener noreferrer">Visit ABFRL</a>
+            </article>
 
-        <hr>
+            <!-- PROJECT 3 -->
+            <article class="project-card">
+                <h3>PLM (Simplex) Integration &mdash; ABFRL</h3>
+                <p>
+                    Implemented Simplex PLM for the fashion &amp; retail section and
+                    integrated it with existing enterprise applications via middleware.
+                    Managed project milestones, tracked risks and blockers, conducted
+                    regression testing, and ensured business stakeholders were trained
+                    throughout the delivery lifecycle.
+                </p>
+                <p><strong>Role:</strong> Project Manager</p>
+                <p><strong>Duration:</strong> Jul 2023 &ndash; Dec 2025</p>
+                <a class="project-link" href="https://www.abfrl.com" target="_blank" rel="noopener noreferrer">Visit ABFRL</a>
+            </article>
 
-        <!-- PROJECT 3 -->
-        <article>
-            <h3>PLM (Simplex) Integration &mdash; ABFRL</h3>
-            <p>
-                Implemented Simplex PLM for the fashion &amp; retail section and 
-                integrated it with existing enterprise applications via middleware. 
-                Managed project milestones, tracked risks and blockers, conducted 
-                regression testing, and ensured business stakeholders were trained 
-                throughout the delivery lifecycle.
-            </p>
-            <p><strong>Role:</strong> Project Manager</p>
-            <p><strong>Duration:</strong> Jul 2023 &ndash; Dec 2025</p>
-            <a href="https://www.abfrl.com" target="_blank" rel="noopener noreferrer">Visit ABFRL</a>
-        </article>
+        </div>
     </section>
     <!-- END PROJECTS SECTION -->
 
     <!-- ========== CONTACT SECTION ========== -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p class="contact-intro">For project inquiries or career opportunities, please fill out the form below.</p>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>For project inquiries or career opportunities, please fill out the form below.</p>
-
-    <!-- Contact form with HTML5 validation -->
-    <form>
-
-        <!-- Name field - required -->
-          <div>
-        <label for="name">Your Name</label>
-        <input 
-            type="text" 
-            id="name" 
-            name="name" 
-            placeholder="Only text allowed"
-            pattern="[A-Za-z\s]+"
-            required>
+        <form>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Only text allowed" pattern="[A-Za-z\s]+" required>
             </div>
 
-        <!-- Email field - required, must be valid email format -->
-         <div>
-        <label for="email">Your Email</label>
-        <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            placeholder="Enter your email address"
-            required>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
             </div>
 
-        <!-- Subject field - required -->
-        <div>
-        <label for="subject">Subject</label>
-        <input 
-            type="text" 
-            id="subject" 
-            name="subject" 
-            placeholder="Enter subject"
-            required>
-            </div>
-        <!-- Message field - textarea for multi-line, required -->
-         <div>
-        <label for="message">Message</label>
-        <textarea 
-            id="message" 
-            name="message" 
-            rows="5" 
-            placeholder="Write your message here..."
-            required></textarea>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
             </div>
 
-        <!-- Submit button -->
-        <button type="submit">Send Message</button>
-    </form>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
 
-</section>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
     <!-- END CONTACT SECTION -->
-
-    <hr>
 
     <!-- ========== FOOTER SECTION ========== -->
     <footer>
