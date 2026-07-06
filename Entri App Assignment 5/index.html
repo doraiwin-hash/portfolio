@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorai Raj | Portfolio</title>
+    <meta name="description" content="Portfolio of Dorai Raj — Project Manager & Business Solutions Specialist based in Bengaluru.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        /* ===== BASE ===== */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1a1a2e;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background-color: #0f3460;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #e94560 !important;
+            letter-spacing: 1px;
+        }
+        .nav-link {
+            color: #ffffff !important;
+            font-weight: 500;
+            margin: 0 6px;
+            transition: color 0.2s;
+        }
+        .nav-link:hover {
+            color: #e94560 !important;
+        }
+
+        /* ===== HERO ===== */
+        #hero {
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 60%, #1a1a2e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        #hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+        #hero h1 span {
+            color: #e94560;
+        }
+        #hero p {
+            color: #b0b8d1;
+            font-size: 1.15rem;
+        }
+        .btn-primary-custom {
+            background-color: #e94560;
+            border: none;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn-primary-custom:hover {
+            background-color: #c73652;
+            color: #fff;
+        }
+        .btn-outline-custom {
+            border: 2px solid #e94560;
+            color: #e94560;
+            padding: 11px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            background: transparent;
+            transition: all 0.2s;
+        }
+        .btn-outline-custom:hover {
+            background-color: #e94560;
+            color: #fff;
+        }
+
+        /* ===== SECTION TITLES ===== */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0f3460;
+            margin-bottom: 8px;
+        }
+        .section-underline {
+            width: 50px;
+            height: 4px;
+            background-color: #e94560;
+            margin: 0 auto 40px auto;
+            border-radius: 2px;
+        }
+
+        /* ===== ABOUT ===== */
+        #about {
+            background-color: #f8f9fc;
+            padding: 80px 0;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            color: #e94560;
+        }
+        .feature-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 30px 24px;
+            box-shadow: 0 2px 16px rgba(15,52,96,0.08);
+            height: 100%;
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+        .feature-card h5 {
+            font-weight: 700;
+            color: #0f3460;
+            margin-top: 12px;
+        }
+
+        /* ===== SERVICES ===== */
+        #services {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+        .service-card {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 16px rgba(15,52,96,0.08);
+            transition: transform 0.2s;
+            height: 100%;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+        .service-card .card-title {
+            font-weight: 700;
+            color: #0f3460;
+        }
+        .service-badge {
+            background-color: #e94560;
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        /* ===== GALLERY ===== */
+        #gallery {
+            padding: 80px 0;
+            background-color: #f8f9fc;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            background: #0f3460;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: opacity 0.2s;
+        }
+        .gallery-item:hover {
+            opacity: 0.85;
+        }
+        .gallery-item.g1 { background: linear-gradient(135deg, #0f3460, #e94560); }
+        .gallery-item.g2 { background: linear-gradient(135deg, #16213e, #0f3460); }
+        .gallery-item.g3 { background: linear-gradient(135deg, #e94560, #c73652); }
+        .gallery-item.g4 { background: linear-gradient(135deg, #1a1a2e, #0f3460); }
+        .gallery-item.g5 { background: linear-gradient(135deg, #0f3460, #16213e); }
+        .gallery-item.g6 { background: linear-gradient(135deg, #e94560, #0f3460); }
+
+        /* ===== TESTIMONIALS ===== */
+        #testimonials {
+            padding: 80px 0;
+            background-color: #0f3460;
+        }
+        #testimonials .section-title {
+            color: #ffffff;
+        }
+        .testimonial-card {
+            background: rgba(255,255,255,0.07);
+            border-radius: 10px;
+            padding: 40px 36px;
+            color: #ffffff;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .testimonial-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #d0d8ec;
+        }
+        .testimonial-card .name {
+            font-weight: 700;
+            color: #e94560;
+            margin-top: 20px;
+        }
+        .testimonial-card .role {
+            font-size: 0.85rem;
+            color: #b0b8d1;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(0);
+        }
+
+        /* ===== CONTACT ===== */
+        #contact {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+        .contact-form .form-control {
+            border-radius: 4px;
+            border: 1.5px solid #dde3f0;
+            padding: 12px 16px;
+            font-size: 0.97rem;
+        }
+        .contact-form .form-control:focus {
+            border-color: #e94560;
+            box-shadow: 0 0 0 3px rgba(233,69,96,0.12);
+        }
+        .contact-form label {
+            font-weight: 600;
+            color: #0f3460;
+            margin-bottom: 6px;
+        }
+        .btn-submit {
+            background-color: #e94560;
+            color: #fff;
+            border: none;
+            padding: 12px 36px;
+            font-weight: 700;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #c73652;
+            color: #fff;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #1a1a2e;
+            padding: 60px 0 30px;
+            color: #b0b8d1;
+        }
+        footer h6 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+        footer a {
+            color: #b0b8d1;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            color: #e94560;
+        }
+        .footer-divider {
+            border-color: rgba(255,255,255,0.1);
+            margin: 30px 0 20px;
+        }
+        .footer-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #e94560;
+        }
+
+        /* ===== PROFILE PHOTO ===== */
+        .profile-photo {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #e94560;
+            box-shadow: 0 8px 32px rgba(233,69,96,0.25);
+            display: block;
+            margin: 0 auto;
+        }
+        .about-photo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #e94560;
+            box-shadow: 0 4px 20px rgba(15,52,96,0.15);
+        }
+
+        /* ===== RESPONSIVE TWEAKS ===== */
+        @media (max-width: 767px) {
+            #hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.6rem; }
+            .testimonial-card { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== 1. NAVBAR ========== -->
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Dorai Raj</a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="filter:invert(1);"></span>
+        </button>
+
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END NAVBAR -->
+
+
+<!-- ========== 2. HERO SECTION ========== -->
+<section id="hero">
+    <div class="container">
+        <div class="row align-items-center min-vh-100 py-5">
+
+            <!-- Left: Text -->
+            <div class="col-lg-7 col-md-8">
+                <p class="text-uppercase fw-bold mb-2" style="color:#e94560; letter-spacing:2px;">
+                    Project Manager & Business Solutions
+                </p>
+                <h1>
+                    Hi, I'm <span>Dorai Raj</span><br>
+                    Enterprise Solutions Expert
+                </h1>
+                <p class="mt-3 mb-4">
+                    10+ years delivering ERP, POS, PLM, and Agile implementations
+                    across global fashion & retail enterprises.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#services" class="btn-primary-custom text-decoration-none">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn-outline-custom text-decoration-none">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Profile Photo -->
+            <div class="col-lg-5 col-md-4 mt-5 mt-md-0 text-center d-none d-md-block">
+                <img
+                    src="images/Dorai.jpg"
+                    alt="Dorai Raj, Project Manager based in Bengaluru"
+                    class="profile-photo">
+                <!-- Stats below photo -->
+                <div class="row g-2 mt-4">
+                    <div class="col-6">
+                        <div class="p-3 rounded" style="background:rgba(233,69,96,0.12);">
+                            <div style="font-size:1.6rem; font-weight:700; color:#e94560;">10+</div>
+                            <div style="color:#b0b8d1; font-size:0.82rem;">Years Experience</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-3 rounded" style="background:rgba(255,255,255,0.06);">
+                            <div style="font-size:1.6rem; font-weight:700; color:#e94560;">3+</div>
+                            <div style="color:#b0b8d1; font-size:0.82rem;">Major Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- END HERO -->
+
+
+<!-- ========== 3. ABOUT / FEATURES SECTION ========== -->
+<section id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">About Me</h2>
+            <div class="section-underline"></div>
+        </div>
+
+        <!-- Bio Row -->
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <!-- Profile photo in About section -->
+                <div class="d-flex align-items-center gap-4 mb-4">
+                    <img
+                        src="images/Dorai.jpg"
+                        alt="Dorai Raj, Project Manager based in Bengaluru"
+                        class="about-photo">
+                    <div>
+                        <h4 class="fw-bold mb-1" style="color:#0f3460;">Dorai Raj</h4>
+                        <p class="mb-0" style="color:#e94560; font-weight:600;">
+                            Business Solutions Specialist
+                        </p>
+                        <p class="mb-0" style="color:#888; font-size:0.9rem;">
+                            Bengaluru, Karnataka
+                        </p>
+                    </div>
+                </div>
+                <h4 class="fw-bold" style="color:#0f3460;">
+                    About Me
+                </h4>
+                <p class="mt-3" style="line-height:1.8; color:#444;">
+                    Currently at <strong>Dr. Martens plc</strong>, contributing to
+                    Distribution & Wholesale product groups using Agile methodology.
+                    Previously at <strong>Aditya Birla Fashion & Retail</strong> for
+                    nearly 3 years, leading ERP and PLM implementations.
+                </p>
+                <p style="line-height:1.8; color:#444;">
+                    Based in Bengaluru, Karnataka — bridging business needs and
+                    technology solutions across global enterprise environments.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <!-- Skills list as badges -->
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary px-3 py-2">Microsoft D365</span>
+                    <span class="badge bg-danger px-3 py-2">ERP Implementation</span>
+                    <span class="badge bg-primary px-3 py-2">Unicommerce OMS/WMS</span>
+                    <span class="badge bg-danger px-3 py-2">Simplex PLM</span>
+                    <span class="badge bg-primary px-3 py-2">Agile / Scrum</span>
+                    <span class="badge bg-danger px-3 py-2">QA & UAT Testing</span>
+                    <span class="badge bg-primary px-3 py-2">Stakeholder Management</span>
+                    <span class="badge bg-danger px-3 py-2">Middleware Integration</span>
+                    <span class="badge bg-primary px-3 py-2">Change Control</span>
+                    <span class="badge bg-danger px-3 py-2">Risk Management</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature Cards Row: 1 col mobile, 3 col desktop -->
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">⚙️</div>
+                    <h5>ERP Expert</h5>
+                    <p style="color:#666; font-size:0.95rem;">
+                        Deep experience with Microsoft D365 implementation,
+                        configuration, and end-user training across enterprise environments.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">🔗</div>
+                    <h5>Integration Specialist</h5>
+                    <p style="color:#666; font-size:0.95rem;">
+                        Skilled in middleware and application integration, connecting
+                        POS, PLM, OMS, and WMS systems seamlessly.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="feature-card text-center">
+                    <div class="feature-icon">📋</div>
+                    <h5>Agile Practitioner</h5>
+                    <p style="color:#666; font-size:0.95rem;">
+                        Sprint planning, QA regression testing, stakeholder
+                        communication, and BAU support across multiple time zones.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- END ABOUT -->
+
+
+<!-- ========== 4. SERVICES / CARDS SECTION ========== -->
+<section id="services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">My Projects</h2>
+            <div class="section-underline"></div>
+        </div>
+
+        <!-- Responsive: 1 col (mobile), 2 col (tablet), 3 col (desktop) -->
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <span class="service-badge">Current</span>
+                        <h5 class="card-title mt-3">D365 ERP Rollout</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Dr. Martens plc</h6>
+                        <p class="card-text mt-3" style="color:#555; font-size:0.93rem;">
+                            Contributing to the Distribution & Wholesale product group.
+                            Responsibilities include business process documentation,
+                            sprint planning, QA regression testing, and BAU support.
+                        </p>
+                        <ul class="list-unstyled mt-3" style="font-size:0.88rem; color:#888;">
+                            <li>📌 Role: Business Solutions Specialist</li>
+                            <li>📅 Dec 2025 – Present</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-4 px-4">
+                        <a href="https://www.drmartens.com" target="_blank"
+                            class="btn btn-sm text-white fw-bold"
+                            style="background:#e94560; border-radius:4px;">
+                            Visit Dr. Martens →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <span class="service-badge">Completed</span>
+                        <h5 class="card-title mt-3">Unicommerce OMS/WMS</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">ABFRL</h6>
+                        <p class="card-text mt-3" style="color:#555; font-size:0.93rem;">
+                            Led implementation of Unicommerce for Fashion & Retail,
+                            enabling omnichannel order and warehouse management.
+                            Managed middleware integrations and post-go-live support.
+                        </p>
+                        <ul class="list-unstyled mt-3" style="font-size:0.88rem; color:#888;">
+                            <li>📌 Role: IT Associate Project Manager</li>
+                            <li>📅 Feb 2023 – Dec 2025</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-4 px-4">
+                        <a href="https://www.abfrl.com" target="_blank"
+                            class="btn btn-sm text-white fw-bold"
+                            style="background:#e94560; border-radius:4px;">
+                            Visit ABFRL →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <span class="service-badge">Completed</span>
+                        <h5 class="card-title mt-3">PLM (Simplex) Integration</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">ABFRL</h6>
+                        <p class="card-text mt-3" style="color:#555; font-size:0.93rem;">
+                            Implemented Simplex PLM and integrated it with enterprise
+                            applications via middleware. Managed milestones, tracked
+                            risks, and ensured stakeholder training throughout delivery.
+                        </p>
+                        <ul class="list-unstyled mt-3" style="font-size:0.88rem; color:#888;">
+                            <li>📌 Role: Project Manager</li>
+                            <li>📅 Jul 2023 – Dec 2025</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-white border-0 pb-4 px-4">
+                        <a href="https://www.abfrl.com" target="_blank"
+                            class="btn btn-sm text-white fw-bold"
+                            style="background:#e94560; border-radius:4px;">
+                            Visit ABFRL →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- END SERVICES -->
+
+
+<!-- ========== 5. IMAGE GALLERY ========== -->
+<section id="gallery">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">Skills Gallery</h2>
+            <div class="section-underline"></div>
+        </div>
+
+        <!-- Responsive: 1 col mobile, 2 col tablet, 3 col desktop -->
+        <div class="row g-3">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="gallery-item g1">ERP Implementation</div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="gallery-item g2">Agile / Scrum</div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="gallery-item g3">Middleware Integration</div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="gallery-item g4">QA & Regression Testing</div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="gallery-item g5">Stakeholder Management</div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="gallery-item g6">Change Control</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- END GALLERY -->
+
+
+<!-- ========== 6. TESTIMONIALS CAROUSEL ========== -->
+<section id="testimonials">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">What People Say</h2>
+            <div class="section-underline" style="background:#e94560;"></div>
+        </div>
+
+        <!-- Bootstrap Carousel Component -->
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- Slides -->
+            <div class="carousel-inner pb-5">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="testimonial-card">
+                        <p>
+                            "Dorai's deep expertise in D365 and his ability to translate
+                            complex business requirements into workable solutions made
+                            him an invaluable member of our delivery team."
+                        </p>
+                        <div class="name">Sarah Thompson</div>
+                        <div class="role">Programme Director, Dr. Martens plc</div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <p>
+                            "His leadership of the Unicommerce OMS implementation
+                            was outstanding. He managed cross-functional teams with
+                            clarity and delivered on time with excellent documentation."
+                        </p>
+                        <div class="name">Rajan Mehta</div>
+                        <div class="role">IT Director, Aditya Birla Fashion & Retail</div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <p>
+                            "A reliable professional with strong analytical skills.
+                            Dorai's approach to stakeholder training and change management
+                            set the benchmark for our future projects."
+                        </p>
+                        <div class="name">Priya Nair</div>
+                        <div class="role">Operations Head, ABFRL</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button"
+                data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button"
+                data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+        </div>
+    </div>
+</section>
+<!-- END TESTIMONIALS -->
+
+
+<!-- ========== 7. CONTACT FORM ========== -->
+<section id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-underline"></div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <!-- Bootstrap Form with validation -->
+                <form class="contact-form needs-validation" novalidate>
+
+                    <!-- Row 1: Name + Email side by side -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-12 col-md-6">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                pattern="[A-Za-z\s]+"
+                                title="Name should contain letters only"
+                                required>
+                            <div class="invalid-feedback">
+                                Please enter your name (letters only).
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Subject full width -->
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="subject"
+                            name="subject"
+                            placeholder="Enter subject"
+                            required>
+                        <div class="invalid-feedback">
+                            Please enter a subject.
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Message full width -->
+                    <div class="mb-4">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea
+                            class="form-control"
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message here..."
+                            required></textarea>
+                        <div class="invalid-feedback">
+                            Please enter your message.
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn-submit">
+                            Send Message
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CONTACT -->
+
+
+<!-- ========== 8. FOOTER ========== -->
+<footer>
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Col 1: Brand -->
+            <div class="col-12 col-md-4">
+                <div class="footer-brand mb-3">Dorai Raj</div>
+                <p style="font-size:0.9rem; line-height:1.7;">
+                    Project Manager & Business Solutions Specialist.<br>
+                    Bengaluru, Karnataka, India.
+                </p>
+                <p style="font-size:0.9rem;">
+                    📧 <a href="mailto:dorai.win@gmail.com">dorai.win@gmail.com</a>
+                </p>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="col-6 col-md-2 offset-md-1">
+                <h6>Quick Links</h6>
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- Col 3: Expertise -->
+            <div class="col-6 col-md-2">
+                <h6>Expertise</h6>
+                <a href="#">ERP (D365)</a>
+                <a href="#">PLM (Simplex)</a>
+                <a href="#">OMS / WMS</a>
+                <a href="#">Agile / Scrum</a>
+            </div>
+
+            <!-- Col 4: Social -->
+            <div class="col-12 col-md-3">
+                <h6>Connect</h6>
+                <a href="https://www.linkedin.com" target="_blank">🔗 LinkedIn</a>
+                <a href="https://github.com" target="_blank">💻 GitHub</a>
+                <a href="mailto:dorai.win@gmail.com">✉️ Email</a>
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="text-center" style="font-size:0.88rem;">
+            © 2025 <strong style="color:#fff;">Dorai Raj</strong> —
+            Project Manager & Business Solutions Specialist, Bengaluru, India.
+        </div>
+
+    </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<!-- Bootstrap 5 JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap Form Validation Script -->
+<script>
+    // Adds Bootstrap validation styles on submit
+    (function () {
+        'use strict';
+        var forms = document.querySelectorAll('.needs-validation');
+        Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>
+
+</body>
+</html>
